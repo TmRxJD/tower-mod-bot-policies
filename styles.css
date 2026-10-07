@@ -1,9 +1,9 @@
-:root { color-scheme: light; --ink: #182c36; --muted: #49616e; --accent: #095d68; --line: #cddbdc; --paper: #fbfcf9; }
+:root { color-scheme: dark; --ink: #e5edf3; --muted: #aabac8; --accent: #76ddd2; --line: #3b4b5c; --paper: #101720; --surface: #17222e; --summary: #182e33; }
 body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.75 system-ui, sans-serif; }
 a { color: var(--accent); text-underline-offset: .2em; overflow-wrap: anywhere; }
 a:hover { text-decoration-thickness: 2px; }
 a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
-.skip { position: absolute; inset-block-start: -6rem; inset-inline-start: 1rem; padding: .6rem 1rem; background: white; }
+.skip { position: absolute; inset-block-start: -6rem; inset-inline-start: 1rem; padding: .6rem 1rem; background: var(--surface); border: 1px solid var(--accent); }
 .skip:focus { inset-block-start: 1rem; }
 header, main, footer { max-inline-size: 72rem; margin-inline: auto; padding-inline: clamp(1.25rem, 5vw, 4rem); }
 header { padding-block: 1.5rem; border-block-end: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
@@ -18,9 +18,10 @@ h2 { font-size: 1.4rem; line-height: 1.4; margin-block: 2.4rem .7rem; }
 p, ul, ol { margin-block: .8rem; }
 li { margin-block: .45rem; }
 .meta { color: var(--muted); font-size: .9rem; }
-.summary { background: #eaf2ef; border-inline-start: 4px solid var(--accent); padding: 1rem 1.35rem; margin-block: 2rem; }
+.summary { background: var(--summary); border-inline-start: 4px solid var(--accent); padding: 1rem 1.35rem; margin-block: 2rem; }
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 1.25rem; margin-block: 2rem; }
-.card { border: 1px solid var(--line); padding: 1.5rem; border-radius: .65rem; }
+.card { background: var(--surface); border: 1px solid var(--line); padding: 1.5rem; border-radius: .65rem; }
 .card h2 { margin-block-start: 0; }
 footer { border-block-start: 1px solid var(--line); padding-block: 1.5rem; color: var(--muted); font-size: .9rem; }
-@media print { header, footer, .skip { display: none; } main { max-inline-size: none; padding: 0; } body { background: white; } h2 { break-after: avoid; } }
+@media (forced-colors: active) { :root { --ink: CanvasText; --muted: CanvasText; --accent: LinkText; --line: CanvasText; --paper: Canvas; --surface: Canvas; --summary: Canvas; } }
+@media print { :root { color-scheme: light; --ink: #182c36; --muted: #49616e; --accent: #095d68; --line: #cddbdc; --paper: white; --surface: white; --summary: #eaf2ef; } header, footer, .skip { display: none; } main { max-inline-size: none; padding: 0; } h2 { break-after: avoid; } }
