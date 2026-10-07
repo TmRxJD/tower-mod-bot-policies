@@ -1,6 +1,6 @@
 # The Tower Mod Bot policies
 
-Standalone public GitHub Pages site for The Tower Mod Bot. Only public policy content belongs here: never add bot source, logs, databases, transcripts, configuration, or secrets.
+Standalone public GitHub Pages site for The Tower Mod Bot. The bot itself is a private tool for the designated moderation team of the official The Tower Discord, with any affiliated sister-server deployment requiring the operator's explicit authorization. It is not available for public installation in other servers. Members can still use community features enabled for them. Only public policy content belongs here: never add bot source, logs, databases, transcripts, configuration, or secrets.
 
 - Site: https://tmrxjd.github.io/tower-mod-bot-policies/
 - Privacy policy: https://tmrxjd.github.io/tower-mod-bot-policies/privacy/
